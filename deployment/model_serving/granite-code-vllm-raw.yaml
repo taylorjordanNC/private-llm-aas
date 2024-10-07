@@ -80,5 +80,4 @@ spec:
     tolerations:
       - effect: NoSchedule
         key: nvidia.com/gpu
-        operator: Equal
-        value: 'NVIDIA-A10G-SHARED'
+        operator: Exists
