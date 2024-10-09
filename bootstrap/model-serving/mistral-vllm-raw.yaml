@@ -6,6 +6,7 @@ metadata:
     openshift.io/display-name: Mistral-7B-Instruct-v0.3
     serving.kserve.io/deploymentMode: RawDeployment
   name: mistral-7b-instruct
+  namespace: llm-hosting  
   labels:
     opendatahub.io/dashboard: 'true'
 spec:
