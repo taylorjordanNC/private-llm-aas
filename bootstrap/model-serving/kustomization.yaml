@@ -13,7 +13,7 @@ resources:
 # wave 1
 - project-manager.yaml
 - secret-aws-connection-llm-hosting.yaml
-- storage-config-llm-hosting.yaml
+- create-odh-tec-workbench.yaml
 - granite-code-vllm-raw.yaml
 - mistral-vllm-raw.yaml
 - nvidia-gpu-monitoring-dashboard-job.yaml
