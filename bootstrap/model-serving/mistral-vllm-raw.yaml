@@ -5,10 +5,10 @@ metadata:
   annotations:
     opendatahub.io/apiProtocol: REST
     opendatahub.io/recommended-accelerators: '["nvidia.com/gpu"]'
-    openshift.io/display-name: "vLLM-RHOAI 2.12-max-len: 6144"
-    opendatahub.io/template-display-name: "vLLM-RHOAI 2.12-max-len: 6144"
-    opendatahub.io/template-name: vllm-2.12-6144
-  name: vllm-2.12-6144
+    openshift.io/display-name: "vLLM-RHOAI 2.14-max-len: 6144"
+    opendatahub.io/template-display-name: "vLLM-RHOAI 2.14-max-len: 6144"
+    opendatahub.io/template-name: vllm-2.14-6144
+  name: vllm-2.14-6144
   labels:
     opendatahub.io/dashboard: 'true'
 spec:
@@ -29,7 +29,7 @@ spec:
       env:
         - name: HF_HOME
           value: /tmp/hf_home
-      image: 'quay.io/modh/vllm:rhoai-2.12'
+      image: 'quay.io/modh/vllm:rhoai-2.14'
       name: kserve-container
       ports:
         - containerPort: 8080
@@ -73,7 +73,7 @@ spec:
           cpu: 200m
           memory: 16Gi
           nvidia.com/gpu: '1'
-      runtime: vllm-2.12-6144
+      runtime: vllm-2.14-6144
       storage:
         key: aws-connection-models
         path: mistralai/Mistral-7B-Instruct-v0.3/
