@@ -12,11 +12,11 @@ spec:
         repoURL: https://github.com/redhat-gpte-devopsautomation/llm-aas.git
         targetRevision: main
         path: bootstrap/model-serving 
-#      - cluster: in-cluster
-#        name: rh-sso
-#        repoURL: https://github.com/redhat-gpte-devopsautomation/llm-aas.git
-#        targetRevision: main
-#        path: bootstrap/rh-sso     
+      - cluster: in-cluster
+        name: rh-sso
+        repoURL: https://github.com/redhat-gpte-devopsautomation/llm-aas.git
+        targetRevision: main
+        path: bootstrap/rh-sso     
 #      - cluster: in-cluster
 #        name: three-scale
 #        repoURL: https://github.com/redhat-gpte-devopsautomation/llm-aas.git
