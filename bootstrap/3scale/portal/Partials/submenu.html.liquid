@@ -57,6 +57,22 @@
           </a>
         </li>
       {% endunless %}
+            <li>
+        <a id="github-link" style="display:flex;padding-top:4px !important;padding-bottom: 2px!important" target="_blank" href="https://github.com/rh-aiservices-bu/models-aas">
+          <i class="fa fa-2x fa-brands fa-github" style="display:inline;padding-top:6px"></i>
+          <ul style="padding-left:10px;list-style-type:none;display:inline">
+            <li>
+              Github
+            </li>
+            <li>
+              <ul style="padding-left:0;list-style-type:none;">
+                <li style="display:inline"><i class="fa fa-star"></i><span id="stars-count"></span></li>
+                <li style="display:inline"><i class="fa fa-code-fork"></i><span id="forks-count"></span></li>
+              </ul>
+            </li>
+          </ul>
+        </a>
+      </li>
       <li>
         <a id="sign-out-button" class="pull-right sign-out" title="Sign Out {{ current_user.username }}" href="{{ urls.logout }}">
           <i class="fa fa-sign-out"></i>
@@ -67,14 +83,45 @@
   {% else %}
     <ul class="nav navbar-nav">
       <li><a href="/docs">APIs Documentation</a></li>
-      <li><a href="/#plans">Plans</a></li>
+      <li><a class="active" href="/examples">Usage Examples</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li>
+        <a id="github-link" style="display:flex;padding-top:4px !important;padding-bottom: 2px!important" target="_blank" href="https://github.com/rh-aiservices-bu/models-aas">
+          <i class="fa fa-2x fa-brands fa-github" style="display:inline;padding-top:6px"></i>
+          <ul style="padding-left:10px;list-style-type:none;display:inline">
+            <li>
+              Github
+            </li>
+            <li>
+              <ul style="padding-left:0;list-style-type:none;">
+                <li style="display:inline"><i class="fa fa-star"></i><span id="stars-count"></span></li>
+                <li style="display:inline"><i class="fa fa-code-fork"></i><span id="forks-count"></span></li>
+              </ul>
+            </li>
+          </ul>
+        </a>
+      </li>
+      <li>
         <a href="{{ urls.login }}" title="Login">
-          Sign in
+          <i class="fa fa-sign-in"></i>&nbsp;Sign in
         </a>
       </li>
     </ul>
   {% endif %}
 </div>
+
+<script>
+  fetch(`https://api.github.com/repos/rh-aiservices-bu/models-aas/stargazers`)
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('stars-count').textContent = data.length;
+    })
+    .catch(error => console.error(error));
+  fetch(`https://api.github.com/repos/rh-aiservices-bu/models-aas/forks`)
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('forks-count').textContent = data.length;
+    })
+    .catch(error => console.error(error));
+</script>

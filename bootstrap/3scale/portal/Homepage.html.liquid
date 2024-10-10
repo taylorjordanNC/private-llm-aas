@@ -7,7 +7,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>Models as a Service with OpenShift AI</h1>
+        <h1>Models as a Service on OpenShift AI</h1>
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@
         <div class="panel-body panel-footer">
           {% if current_account.applications.size == 0 %}
             <a href="{{ urls.new_application }}" class="btn btn-primary">Create an Application</a>
-          {% elsif current_account.applications.size => 1 %}
+          {% elsif current_account.applications.size >= 1 %}
             <a href="{{ urls.applications }}" class="btn btn-primary">See your Applications & their credentials</a>
           {% endif %}
           </div>
