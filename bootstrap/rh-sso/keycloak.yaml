@@ -1,7 +1,10 @@
 apiVersion: keycloak.org/v1alpha1
 kind: Keycloak
 metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
   name: rh-sso
+  namespace: rh-sso
   labels:
     app: rh-sso
 spec:

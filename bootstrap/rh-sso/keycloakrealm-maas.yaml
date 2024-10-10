@@ -1,7 +1,10 @@
 apiVersion: keycloak.org/v1alpha1
 kind: KeycloakRealm
 metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
   name: mass
+  namespace: rh-sso  
 spec:
   instanceSelector:
     matchLabels:
