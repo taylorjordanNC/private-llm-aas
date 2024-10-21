@@ -2,6 +2,7 @@
     "openapi": "3.0.3",
     "info": {
         "title": "Mistral-7B-Instruct-v0.3",
+        "version": "1.0.0",
         "description": "The Mistral-7B-Instruct-v0.3 Large Language Model (LLM) is an instruct fine-tuned version of the Mistral-7B-v0.3. Ref: https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3"
     },
     "paths": {
@@ -264,9 +265,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Content"
@@ -275,9 +273,6 @@
                         "anyOf": [
                             {
                                 "$ref": "#/components/schemas/FunctionCall"
-                            },
-                            {
-                                "type": "null"
                             }
                         ]
                     },
@@ -348,9 +343,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Content"
@@ -474,9 +466,6 @@
                         "anyOf": [
                             {
                                 "type": "number"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Frequency Penalty",
@@ -489,9 +478,6 @@
                                     "type": "number"
                                 },
                                 "type": "object"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Logit Bias"
@@ -500,9 +486,6 @@
                         "anyOf": [
                             {
                                 "type": "boolean"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Logprobs",
@@ -512,9 +495,6 @@
                         "anyOf": [
                             {
                                 "type": "integer"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Top Logprobs",
@@ -524,9 +504,6 @@
                         "anyOf": [
                             {
                                 "type": "integer"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Max Tokens"
@@ -535,9 +512,6 @@
                         "anyOf": [
                             {
                                 "type": "integer"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "N",
@@ -547,9 +521,6 @@
                         "anyOf": [
                             {
                                 "type": "number"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Presence Penalty",
@@ -559,9 +530,6 @@
                         "anyOf": [
                             {
                                 "$ref": "#/components/schemas/ResponseFormat"
-                            },
-                            {
-                                "type": "null"
                             }
                         ]
                     },
@@ -571,9 +539,6 @@
                                 "type": "integer",
                                 "maximum": 9.223372036854776e+18,
                                 "minimum": -9.223372036854776e+18
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Seed"
@@ -588,9 +553,6 @@
                                     "type": "string"
                                 },
                                 "type": "array"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Stop"
@@ -599,9 +561,6 @@
                         "anyOf": [
                             {
                                 "type": "boolean"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Stream",
@@ -611,9 +570,6 @@
                         "anyOf": [
                             {
                                 "$ref": "#/components/schemas/StreamOptions"
-                            },
-                            {
-                                "type": "null"
                             }
                         ]
                     },
@@ -621,9 +577,6 @@
                         "anyOf": [
                             {
                                 "type": "number"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Temperature",
@@ -633,9 +586,6 @@
                         "anyOf": [
                             {
                                 "type": "number"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Top P",
@@ -648,9 +598,6 @@
                                     "$ref": "#/components/schemas/ChatCompletionToolsParam"
                                 },
                                 "type": "array"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Tools"
@@ -666,9 +613,6 @@
                             },
                             {
                                 "$ref": "#/components/schemas/ChatCompletionNamedToolChoiceParam"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Tool Choice",
@@ -678,9 +622,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "User"
@@ -689,9 +630,6 @@
                         "anyOf": [
                             {
                                 "type": "integer"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Best Of"
@@ -733,9 +671,6 @@
                                     "type": "integer"
                                 },
                                 "type": "array"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Stop Token Ids"
@@ -770,9 +705,6 @@
                             {
                                 "type": "integer",
                                 "minimum": 1.0
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Truncate Prompt Tokens"
@@ -805,9 +737,6 @@
                                     "type": "object"
                                 },
                                 "type": "array"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Documents",
@@ -817,9 +746,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Chat Template",
@@ -829,9 +755,6 @@
                         "anyOf": [
                             {
                                 "type": "object"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Chat Template Kwargs",
@@ -847,9 +770,6 @@
                             },
                             {
                                 "$ref": "#/components/schemas/BaseModel"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Guided Json",
@@ -859,9 +779,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Guided Regex",
@@ -874,9 +791,6 @@
                                     "type": "string"
                                 },
                                 "type": "array"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Guided Choice",
@@ -886,9 +800,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Guided Grammar",
@@ -898,9 +809,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Guided Decoding Backend",
@@ -910,9 +818,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Guided Whitespace Pattern",
@@ -1084,9 +989,6 @@
                         "anyOf": [
                             {
                                 "type": "integer"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Best Of"
@@ -1095,9 +997,6 @@
                         "anyOf": [
                             {
                                 "type": "boolean"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Echo",
@@ -1107,9 +1006,6 @@
                         "anyOf": [
                             {
                                 "type": "number"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Frequency Penalty",
@@ -1122,9 +1018,6 @@
                                     "type": "number"
                                 },
                                 "type": "object"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Logit Bias"
@@ -1133,9 +1026,6 @@
                         "anyOf": [
                             {
                                 "type": "integer"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Logprobs"
@@ -1144,9 +1034,6 @@
                         "anyOf": [
                             {
                                 "type": "integer"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Max Tokens",
@@ -1161,9 +1048,6 @@
                         "anyOf": [
                             {
                                 "type": "number"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Presence Penalty",
@@ -1175,9 +1059,6 @@
                                 "type": "integer",
                                 "maximum": 9.223372036854776e+18,
                                 "minimum": -9.223372036854776e+18
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Seed"
@@ -1192,9 +1073,6 @@
                                     "type": "string"
                                 },
                                 "type": "array"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Stop"
@@ -1203,9 +1081,6 @@
                         "anyOf": [
                             {
                                 "type": "boolean"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Stream",
@@ -1215,9 +1090,6 @@
                         "anyOf": [
                             {
                                 "$ref": "#/components/schemas/StreamOptions"
-                            },
-                            {
-                                "type": "null"
                             }
                         ]
                     },
@@ -1225,9 +1097,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Suffix"
@@ -1236,9 +1105,6 @@
                         "anyOf": [
                             {
                                 "type": "number"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Temperature",
@@ -1248,9 +1114,6 @@
                         "anyOf": [
                             {
                                 "type": "number"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Top P",
@@ -1260,9 +1123,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "User"
@@ -1304,9 +1164,6 @@
                                     "type": "integer"
                                 },
                                 "type": "array"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Stop Token Ids"
@@ -1341,9 +1198,6 @@
                             {
                                 "type": "integer",
                                 "minimum": 1.0
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Truncate Prompt Tokens"
@@ -1355,9 +1209,6 @@
                                     "type": "integer"
                                 },
                                 "type": "array"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Allowed Token Ids"
@@ -1372,9 +1223,6 @@
                         "anyOf": [
                             {
                                 "$ref": "#/components/schemas/ResponseFormat"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "description": "Similar to chat completion, this parameter specifies the format of output. Only {'type': 'json_object'} or {'type': 'text' } is supported."
@@ -1389,9 +1237,6 @@
                             },
                             {
                                 "$ref": "#/components/schemas/BaseModel"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Guided Json",
@@ -1401,9 +1246,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Guided Regex",
@@ -1416,9 +1258,6 @@
                                     "type": "string"
                                 },
                                 "type": "array"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Guided Choice",
@@ -1428,9 +1267,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Guided Grammar",
@@ -1440,9 +1276,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Guided Decoding Backend",
@@ -1452,9 +1285,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Guided Whitespace Pattern",
@@ -1587,9 +1417,6 @@
                             {
                                 "type": "string",
                                 "pattern": "^(float|base64)$"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Encoding Format",
@@ -1599,9 +1426,6 @@
                         "anyOf": [
                             {
                                 "type": "integer"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Dimensions"
@@ -1610,19 +1434,13 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "User"
                     },
                     "additional_data": {
                         "anyOf": [
-                            {},
-                            {
-                                "type": "null"
-                            }
+                            {}
                         ],
                         "title": "Additional Data"
                     }
@@ -1682,9 +1500,6 @@
                         "anyOf": [
                             {
                                 "type": "string"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Description"
@@ -1693,9 +1508,6 @@
                         "anyOf": [
                             {
                                 "type": "object"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Parameters"
@@ -1767,9 +1579,6 @@
                         "anyOf": [
                             {
                                 "type": "boolean"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Include Usage",
@@ -1779,9 +1588,6 @@
                         "anyOf": [
                             {
                                 "type": "boolean"
-                            },
-                            {
-                                "type": "null"
                             }
                         ],
                         "title": "Continuous Usage Stats",
