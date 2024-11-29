@@ -10,6 +10,7 @@ threeScale:
   repoURL: https://github.com/rhpds/ocp-cluster-addons
   targetRevision: main
   path: 3scale
+  channel: threescale-2.15
 
 llmaas:
   repoURL: https://github.com/redhat-gpte-devopsautomation/llm-aas
