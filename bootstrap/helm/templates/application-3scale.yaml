@@ -16,6 +16,7 @@ spec:
       values: |
         namespace: {{ .Values.threeScale.namespace }}
         operator:
+          channel: threescale-2.15
           startingCSV: 3scale-operator.v0.11.12
           installPlanApproval: Manual
         apimanager:
