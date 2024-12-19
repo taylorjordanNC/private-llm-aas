@@ -31,7 +31,7 @@ spec:
       runtime: vllm-2.16-6144
       storage:
         key: aws-connection-models
-        path: mistralai/mistral-7b-instruct-v03/
+        path: mistralai/Mistral-7B-Instruct-v0.3/
     tolerations:
       - effect: NoSchedule
         key: nvidia.com/gpu
