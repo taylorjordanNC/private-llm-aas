@@ -38,8 +38,5 @@ spec:
       destination:
         server: 'https://kubernetes.default.svc'
       syncPolicy:
-        automated:
-          prune: true
-          selfHeal: true
         syncOptions:
           - RespectIgnoreDifferences=true
