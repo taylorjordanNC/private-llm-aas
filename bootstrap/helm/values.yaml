@@ -8,7 +8,7 @@ deployer:
 threeScale:
   namespace: 3scale
   repoURL: https://github.com/rhpds/ocp-cluster-addons
-  targetRevision: main
+  targetRevision: v1.2.2
   path: 3scale
 
 llmaas:
