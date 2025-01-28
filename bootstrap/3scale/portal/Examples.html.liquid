@@ -20,7 +20,7 @@
 <pre>
 <code>
 curl -X 'POST' \
-    'https://granite-8b-code-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1/completions' \
+    'https://granite-8b-code-instruct-maas-apicast-production.apps.llmaas.llmaas.redhatworkshops.io:443/v1/completions' \
     -H 'accept: application/json' \
     -H 'Content-Type: application/json' \
     -H 'Authorization: Bearer ***************************' \
@@ -41,7 +41,7 @@ import urllib3
 import numpy as np
 import json
 
-API_URL = "https://granite-8b-code-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443"
+API_URL = "https://granite-8b-code-instruct-maas-apicast-production.apps.llmaas.llmaas.redhatworkshops.io:443"
 API_KEY = "***************************"
 
 input = ["San Francisco is a"]
@@ -67,7 +67,7 @@ Prerequisites: <code>pip install langchain-community</code>
 <code>
 from langchain_community.llms import VLLMOpenAI
 
-API_URL = "https://granite-8b-code-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443"
+API_URL = "https://granite-8b-code-instruct-maas-apicast-production.apps.llmaas.llmaas.redhatworkshops.io:443"
 API_KEY = "***************************"
 
 llm = VLLMOpenAI(
@@ -90,7 +90,7 @@ Configuration in <code>.continue/config.json</code>
       "title": "Granite-8B-Instruct",
       "provider": "openai",
       "model": "granite-8b-code-instruct-128k",
-      "apiBase": "https://granite-8b-code-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1/",
+      "apiBase": "https://granite-8b-code-instruct-maas-apicast-production.apps.llmaas.llmaas.redhatworkshops.io:443/v1/",
       "apiKey": "************************",
       "completionOptions": {
         "temperature": 0.1,
@@ -106,7 +106,7 @@ Configuration in <code>.continue/config.json</code>
     "title": "Granite-8B-Instruct",
     "provider": "openai",
     "model": "granite-8b-code-instruct-128k",
-    "apiBase": "https://granite-8b-code-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1/",
+    "apiBase": "https://granite-8b-code-instruct-maas-apicast-production.apps.llmaas.llmaas.redhatworkshops.io:443/v1/",
     "apiKey": "****************************",
     "completionOptions": {
       "temperature": 0.1,
@@ -131,7 +131,7 @@ Configuration in <code>.continue/config.json</code>
 <pre>
 <code>
 curl -X 'POST' \
-  'https://nomic-embed-text-v1-5-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/embed' \
+  'https://nomic-embed-text-v1-5-maas-apicast-production.apps.llmaas.llmaas.redhatworkshops.io:443/embed' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer *************************' \
@@ -153,7 +153,7 @@ import urllib3
 import numpy as np
 import json
 
-API_URL = "https://nomic-embed-text-v1-5-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443"
+API_URL = "https://nomic-embed-text-v1-5-maas-apicast-production.apps.llmaas.llmaas.redhatworkshops.io:443"
 API_KEY = "*************************"
 
 test_strings = ["That is a happy dog","That is a very happy person","Today is a sunny day"]
@@ -177,7 +177,7 @@ import urllib3
 import numpy as np
 import json
 
-API_URL = "https://nomic-embed-text-v1-5-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443"
+API_URL = "https://nomic-embed-text-v1-5-maas-apicast-production.apps.llmaas.llmaas.redhatworkshops.io:443"
 API_KEY = "*************************"
 
 test_strings = ["That is a happy dog","That is a very happy person","Today is a sunny day"]
@@ -198,7 +198,7 @@ Prerequisites: <code>pip install langchain-openai</code>
 <code>
 from langchain_openai import OpenAIEmbeddings
 
-API_URL = "https://nomic-embed-text-v1-5-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443"
+API_URL = "https://nomic-embed-text-v1-5-maas-apicast-production.apps.llmaas.llmaas.redhatworkshops.io:443"
 API_KEY = "*************************"
 
 embeddings_model = OpenAIEmbeddings(openai_api_base=API_URL, openai_api_key=API_KEY)
@@ -220,7 +220,7 @@ Configuration in <code>.continue/config.json</code>
     "title": "Nomic-embed-text-v1.5",
     "provider": "openai",
     "model": "nomic-embed-text-v1.5",
-    "apiBase": "https://nomic-embed-text-v1-5-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1/",
+    "apiBase": "https://nomic-embed-text-v1-5-maas-apicast-production.apps.llmaas.llmaas.redhatworkshops.io:443/v1/",
     "apiKey": "*************************",
     "maxBatchSize": 32
   },
