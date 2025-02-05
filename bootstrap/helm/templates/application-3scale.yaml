@@ -26,6 +26,13 @@ spec:
             name: remove-bearer
             version: 0.1
             secret: cp-bearer
+        patcher:
+          routes:
+            label_selectors:
+            - "zync.3scale.net/route-to=apicast-production"
+            - "zync.3scale.net/route-to=apicast-staging"
+            annotations:
+              haproxy.router.openshift.io/timeout: "180s"
         helper-status-checker:
           approver: true
           checks:
