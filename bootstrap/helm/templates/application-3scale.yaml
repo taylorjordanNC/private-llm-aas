@@ -16,8 +16,8 @@ spec:
       values: |
         namespace: {{ .Values.threeScale.namespace }}
         operator:
-          channel: threescale-2.15
-          startingCSV: 3scale-operator.v0.12.0
+          channel: {{ .Values.threeScale.channel }}
+          startingCSV: {{ .Values.threeScale.startingCSV }}
           installPlanApproval: Automatic
         apimanager:
           wildcardDomain: {{ .Values.deployer.domain }}
