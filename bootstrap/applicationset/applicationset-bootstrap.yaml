@@ -9,17 +9,17 @@ spec:
       elements:
       - cluster: in-cluster
         name: model-serving
-        repoURL: https://github.com/redhat-gpte-devopsautomation/llm-aas.git
+        repoURL: https://github.com/redhat-gpte-devopsautomation/lb1816-summit-llm-aas.git
         targetRevision: main
         path: bootstrap/model-serving 
       - cluster: in-cluster
         name: rh-sso
-        repoURL: https://github.com/redhat-gpte-devopsautomation/llm-aas.git
+        repoURL: https://github.com/redhat-gpte-devopsautomation/lb1816-summit-llm-aas.git
         targetRevision: main
         path: bootstrap/rh-sso     
 #      - cluster: in-cluster
 #        name: three-scale
-#        repoURL: https://github.com/redhat-gpte-devopsautomation/llm-aas.git
+#        repoURL: https://github.com/redhat-gpte-devopsautomation/lb1816-summit-llm-aas.git
 #        targetRevision: main
 #        path: bootstrap/3scale
   template:
