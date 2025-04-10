@@ -10,6 +10,7 @@ metadata:
     openshift.io/display-name: "vLLM-RHOAI 2.16-max-len: 6144"
     opendatahub.io/template-display-name: "vLLM-RHOAI 2.16-max-len: 6144"
     opendatahub.io/template-name: vllm-2.16-6144
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
   name: vllm-2.16-6144
   namespace: llm-hosting
   labels:
