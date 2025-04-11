@@ -6,16 +6,16 @@ commonLabels:
   component: aiworkshop
 
 resources:
-# wave 0
 - namespace.yaml
+# wave 0
 - workbench-imagestream.yaml
 - odh-dashboard-config.yaml
-# wave 1
 - granite-code-vllm-raw.yaml
+# wave 1
 - project-manager.yaml
 - secret-aws-connection-llm-hosting.yaml
 - create-odh-tec-workbench.yaml
 - granite-vllm-raw.yaml
-- mistral-vllm-raw.yaml
+#- mistral-vllm-raw.yaml
 - nvidia-gpu-monitoring-dashboard-job.yaml
 #- nomic-embed-raw.yaml
