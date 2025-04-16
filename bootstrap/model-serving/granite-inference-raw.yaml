@@ -3,6 +3,8 @@ apiVersion: serving.kserve.io/v1beta1
 kind: InferenceService
 metadata:
   annotations:
+    argocd.argoproj.io/managed-by: openshift-gitops
+    argocd.argoproj.io/sync-wave: "1"
     openshift.io/display-name: Granite-3.2-8b-instruct
     serving.kserve.io/deploymentMode: RawDeployment
   name: granite-3dot2-8b-instruct
