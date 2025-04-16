@@ -15,7 +15,8 @@ resources:
 - project-manager.yaml
 - secret-aws-connection-llm-hosting.yaml
 - create-odh-tec-workbench.yaml
-- granite-vllm-raw.yaml
+- granite-inference-raw.yaml
+#- granite-vllm-raw.yaml #contains old granite model
 #- mistral-vllm-raw.yaml
 - nvidia-gpu-monitoring-dashboard-job.yaml
 #- nomic-embed-raw.yaml
