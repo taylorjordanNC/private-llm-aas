@@ -8,6 +8,7 @@ commonLabels:
 resources:
 - namespace.yaml
 # wave 0
+- user1-to-admin.yaml
 - workbench-imagestream.yaml
 - odh-dashboard-config.yaml
 - granite-code-vllm-raw.yaml
