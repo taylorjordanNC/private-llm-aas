@@ -37,7 +37,7 @@ metadata:
     opendatahub.io/notebook-image-order: "01"
     opendatahub.io/notebook-image-url: 'quay.io/rh-aiservices-bu/anythingllm-workbench:1.7.5'
     opendatahub.io/recommended-accelerators: "[]"
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "0"
   name: is-anythingllm
   namespace: redhat-ods-applications
   labels:
