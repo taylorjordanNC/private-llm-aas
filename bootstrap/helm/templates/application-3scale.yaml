@@ -12,7 +12,7 @@ spec:
     path: {{ .Values.threeScale.path }}
     helm:
       valueFiles:
-        - values-apis.yaml
+        - values-apis-lb1816.yaml
       values: |
         namespace: {{ .Values.threeScale.namespace }}
         operator:
