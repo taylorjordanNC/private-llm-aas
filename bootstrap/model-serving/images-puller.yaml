@@ -30,3 +30,33 @@ spec:
             cpu: 10m
             memory: 10Mi
 ---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: image-puller-runtime
+  namespace: rhods-notebooks
+  labels:
+    k8s-app: image-puller-runtime
+  annotations:
+    argocd.argoproj.io/managed-by: openshift-gitops
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  selector:
+    matchLabels:
+      name: image-puller-runtime
+  template:
+    metadata:
+      labels:
+        name: image-puller-runtime
+    spec:
+      containers:
+      - name: puller-tinyllama
+        image: quay.io/rh-aiservices-bu/vllm-cpu-openai-ubi9:0.3
+        command: ["tail"]
+        args: ["-f", "/dev/null"]
+        resources:
+          limits:
+            memory: 20Mi
+          requests:
+            cpu: 10m
+            memory: 10Mi
