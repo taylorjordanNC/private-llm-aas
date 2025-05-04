@@ -60,3 +60,34 @@ spec:
           requests:
             cpu: 10m
             memory: 10Mi
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: image-puller-vscode
+  namespace: rhods-notebooks
+  labels:
+    k8s-app: image-puller-vscode
+  annotations:
+    argocd.argoproj.io/managed-by: openshift-gitops
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  selector:
+    matchLabels:
+      name: image-puller-vscode
+  template:
+    metadata:
+      labels:
+        name: image-puller-vscode
+    spec:
+      containers:
+      - name: puller-tinyllama
+        image: image-registry.openshift-image-registry.svc:5000/redhat-ods-applications/code-server-notebook:2024.2
+        command: ["tail"]
+        args: ["-f", "/dev/null"]
+        resources:
+          limits:
+            memory: 20Mi
+          requests:
+            cpu: 10m
+            memory: 10Mi
