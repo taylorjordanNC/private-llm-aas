@@ -21,3 +21,4 @@ resources:
 - nvidia-gpu-monitoring-dashboard-job.yaml
 - anythingllm-connection-type-configmap.yaml
 - images-puller.yaml
+- 3scale-network-policy.yaml
