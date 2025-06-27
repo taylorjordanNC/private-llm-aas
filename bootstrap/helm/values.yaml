@@ -14,6 +14,6 @@ threeScale:
   startingCSV: 3scale-operator.v0.12.0
 
 llmaas:
-  repoURL: https://github.com/redhat-gpte-devopsautomation/lb1816-summit-llm-aas
+  repoURL: https://github.com/redhat-gpte-devopsautomation/private-summit-llm-aas
   targetRevision: main
   path: bootstrap/model-serving 
