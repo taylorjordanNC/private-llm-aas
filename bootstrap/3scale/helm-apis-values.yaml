@@ -1,7 +1,7 @@
 
 apis:
   - name: granite-3dot2-8b-instruct
-    activeDocOpenAPIRef: https://github.com/redhat-gpte-devopsautomation/lb1816-summit-llm-aas/raw/refs/heads/main/bootstrap/3scale/api_definitions/granite-3dot2-8b-instruct.json
+    activeDocOpenAPIRef: https://github.com/redhat-gpte-devopsautomation/private-summit-llm-aas/raw/refs/heads/main/bootstrap/3scale/api_definitions/granite-3dot2-8b-instruct.json
     backend:
       privateBaseURL: http://granite-3dot2-8b-instruct-predictor.llm-hosting.svc.cluster.local:8080
       path: /

@@ -37,7 +37,7 @@ hook:
       syncwave: "1"
 
 git:
-  repo: https://github.com/redhat-gpte-devopsautomation/lb1816-summit-llm-aas.git
+  repo: https://github.com/redhat-gpte-devopsautomation/private-summit-llm-aas.git
   ref: main
 
 cms:
