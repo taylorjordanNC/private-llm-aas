@@ -16,4 +16,4 @@ threeScale:
 llmaas:
   repoURL: https://github.com/redhat-gpte-devopsautomation/private-summit-llm-aas
   targetRevision: main
-  path: bootstrap/model-serving 
+  path: model-serving

@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/redhat-gpte-devopsautomation/private-summit-llm-aas
     targetRevision: main
-    path: bootstrap/3scale/cms-upload
+    path: 3scale/cms-upload
     helm:
       values: |
         hook:
