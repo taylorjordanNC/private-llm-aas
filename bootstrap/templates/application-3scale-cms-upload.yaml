@@ -7,9 +7,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/redhat-gpte-devopsautomation/private-summit-llm-aas
-    targetRevision: main
-    path: 3scale/cms-upload
+    repoURL: {{ .Values.cmsUpload.repoURL }}
+    targetRevision: {{ .Values.cmsUpload.targetRevision }}
+    path: {{ .Values.cmsUpload.path }}
     helm:
       values: |
         hook:
