@@ -41,6 +41,9 @@ spec:
                 syncwave: '1'
                 serviceAccount:
                   name: "3scale-status-checker"
+          users:
+          - name: alice
+            password: alice123
     - repoURL: https://github.com/redhat-gpte-devopsautomation/private-summit-llm-aas
       targetRevision: main
       ref: values
