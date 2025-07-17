@@ -1,4 +1,5 @@
-apiVersion: tekton.dev/v1beta1
+---
+apiVersion: tekton.dev/v1
 kind: Pipeline
 metadata:
   name: upload-cms
@@ -20,12 +21,12 @@ spec:
   tasks:
     - name: clone-contents
       taskRef:
-        kind: ClusterTask
+        kind: Task
         name: git-clone
       params:
-        - name: url
+        - name: URL
           value: $(params.GIT_REPO)
-        - name: revision
+        - name: REVISION
           value: $(params.GIT_REF)
       workspaces:
         - name: output
