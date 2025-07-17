@@ -19,6 +19,4 @@ spec:
     server: https://kubernetes.default.svc
     namespace: 3scale
   syncPolicy:
-    automated:
-      prune: false
-      selfHeal: false
+    automated: {}
