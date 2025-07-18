@@ -22,7 +22,6 @@ metadata:
     operator.tekton.dev/operand-name: openshift-pipelines-addons
     operator.tekton.dev/provider-type: redhat
   name: git-clone
-  namespace: wksp-{{ .Values.username }}
 spec:
   description: "This object represents Git and is able to initialize and clone a remote
     repository on the informed Workspace. It's likely to become the first `step` on
