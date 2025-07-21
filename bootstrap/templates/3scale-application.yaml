@@ -15,4 +15,4 @@ spec:
   productCR:
     name: granite-3dot2-8b-instruct
   accountCR:
-    name: "alice"
+    name: "alice-account"
