@@ -22,10 +22,9 @@ spec:
           apimanager:
             wildcardDomain: {{ .Values.deployer.domain }}
             tenantName: maas
-            removeBearer:
-              name: remove-bearer
+            llmMetrics:
+              name: llm-metrics
               version: 0.1
-              secret: cp-bearer
           patcher:
             routes:
               label_selectors:
