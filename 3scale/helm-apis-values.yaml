@@ -66,6 +66,23 @@ apis:
         enabled: true
         version: builtin
         configuration: {}
+    metrics:
+      hits:
+        friendlyName: Hits
+        unit: hit
+        description: Number of API hits
+      completion_tokens:
+        friendlyName: Completion Tokens
+        unit: token
+        description: Number of completion tokens
+      prompt_tokens:
+        friendlyName: Prompt Tokens
+        unit: token
+        description: Number of prompt tokens
+      total_tokens:
+        friendlyName: Total Tokens
+        unit: token
+        description: Number of total tokens
     methods:
       health:
         friendlyName: Health
