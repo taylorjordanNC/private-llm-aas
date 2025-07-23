@@ -19,18 +19,49 @@ apis:
           allow_headers: ["Authorization", "Content-type", "Accept"]
           allow_methods: []
           allow_origin: "*"
-          allow_credentials: true
       - name: upstream_connection
         enabled: true
         version: builtin
         configuration:
-          connect_timeout: 180
-          send_timeout: 180
-          read_timeout: 180
+          connect_timeout: 300
+          send_timeout: 300
+          read_timeout: 300
       - name: llm-metrics
         enabled: true
         version: "0.1"
-        configuration: {}
+        configuration:
+          enable_sse_support: true
+          rules:
+          - condition:
+              combine_op: and
+              operations:
+              - left: "{{status}}"
+                left_type: liquid
+                op: "=="
+                right: '200'
+                right_type: plain
+            increment: "{{ llm_usage.total_tokens }}"
+            metric: total_tokens
+          - condition:
+              combine_op: and
+              operations:
+              - left: "{{status}}"
+                left_type: liquid
+                op: "=="
+                right: '200'
+                right_type: plain
+            increment: "{{ llm_usage.prompt_tokens }}"
+            metric: prompt_tokens
+          - condition:
+              combine_op: and
+              operations:
+              - left: "{{status}}"
+                left_type: liquid
+                op: "=="
+                right: '200'
+                right_type: plain
+            increment: "{{ llm_usage.completion_tokens }}"
+            metric: completion_tokens
       - name: apicast
         enabled: true
         version: builtin
