@@ -31,7 +31,7 @@ slackMcpSecret:
   graniteToken: secret
 
 llama:
-  repoURL: https://github.com/rhpds/llama-stack-on-ocp.git
+  repoURL: https://github.com/rhpds/private-maas-llama-stack-on-ocp.git
   targetRevision: main
   path: kubernetes/kustomize/overlay/demo
   namespace: llama-serve
