@@ -7,11 +7,11 @@ metadata:
     argocd.argoproj.io/sync-wave: "0"
     opendatahub.io/apiProtocol: REST
     opendatahub.io/recommended-accelerators: '["nvidia.com/gpu"]'
-    openshift.io/display-name: "Granite VLLM"
-    opendatahub.io/template-display-name: "granite-vllm"
-    opendatahub.io/template-name: granite-vllm
+    openshift.io/display-name: "vLLM ServingRuntime - GPU"
+    opendatahub.io/template-display-name: "vLLM ServingRuntime - GPU"
+    opendatahub.io/template-name: vllm-2.16-6144
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
-  name: granite-vllm
+  name: vllm-2.16-6144
   namespace: llm-hosting
   labels:
     component: aiworkshop
