@@ -11,7 +11,9 @@ resources:
 - user1-to-admin.yaml
 - workbench-imagestream.yaml
 - odh-dashboard-config.yaml
-- vllm-runtime-granite.yaml
+- granite-8b/oci-data-connection.yaml
+- granite-8b/servingruntime.yaml
+#- vllm-runtime-granite.yaml
 - vllm-runtime-cpu-template.yaml
 # wave 1
 - project-manager.yaml
@@ -22,4 +24,5 @@ resources:
 - images-puller.yaml
 - 3scale-network-policy.yaml
 # wave 2
-- granite-inference-raw.yaml
+#- granite-inference-raw.yaml
+- granite-8b/inferenceservice.yaml
