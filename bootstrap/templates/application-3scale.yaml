@@ -43,6 +43,7 @@ spec:
           users:
           - name: alice
             password: alice123
+            service: granite-3dot2-8b-instruct
     - repoURL: https://github.com/redhat-gpte-devopsautomation/private-summit-llm-aas
       targetRevision: main
       ref: values
