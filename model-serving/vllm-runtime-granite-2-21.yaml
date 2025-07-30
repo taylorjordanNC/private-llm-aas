@@ -10,6 +10,7 @@ metadata:
     opendatahub.io/template-name: vllm-rhoai-2.21
     openshift.io/display-name: vllm-rhoai-2.21
   name: vllm-rhoai-2.21
+  namespace: llm-hosting  
   labels:
     opendatahub.io/dashboard: 'true'
 spec:
