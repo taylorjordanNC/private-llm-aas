@@ -3,9 +3,11 @@ apiVersion: serving.kserve.io/v1beta1
 kind: InferenceService
 metadata:
   annotations:
-    openshift.io/display-name: Granite-3.3-8B-Instruct
+    argocd.argoproj.io/managed-by: openshift-gitops
+    argocd.argoproj.io/sync-wave: "2"
+    openshift.io/display-name: Granite-3.2-8b-instruct
     serving.kserve.io/deploymentMode: RawDeployment
-  name: granite-3-3-8b-instruct
+  name: granite-3dot2-8b-instruct
   namespace: llm-hosting
   labels:
     opendatahub.io/dashboard: 'true'
