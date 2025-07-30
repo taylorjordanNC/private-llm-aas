@@ -12,7 +12,9 @@ metadata:
   name: vllm-rhoai-2.21
   namespace: llm-hosting  
   labels:
+    component: aiworkshop
     opendatahub.io/dashboard: 'true'
+    rht-gitops.com/openshift-gitops: model-serving
 spec:
   annotations:
     prometheus.io/path: /metrics
