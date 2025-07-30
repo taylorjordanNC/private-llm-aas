@@ -14,6 +14,7 @@ resources:
 #- granite-8b/oci-data-connection.yaml
 #- granite-8b/servingruntime.yaml
 - vllm-runtime-granite.yaml
+- vllm-runtime-granite-2-21.yaml
 - vllm-runtime-cpu-template.yaml
 # wave 1
 - project-manager.yaml
