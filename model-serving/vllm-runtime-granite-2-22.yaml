@@ -6,10 +6,10 @@ metadata:
     opendatahub.io/accelerator-name: ''
     opendatahub.io/apiProtocol: REST
     opendatahub.io/recommended-accelerators: '["nvidia.com/gpu"]'
-    opendatahub.io/template-display-name: 'vLLM-RHOAI-2.21'
-    opendatahub.io/template-name: vllm-rhoai-2.21
-    openshift.io/display-name: vllm-rhoai-2.21
-  name: vllm-rhoai-2.21
+    opendatahub.io/template-display-name: 'vLLM-RHOAI-2.22'
+    opendatahub.io/template-name: vLLM-RHOAI-2.22
+    openshift.io/display-name: vLLM-RHOAI-2.22
+  name: vLLM-RHOAI-2.22
   namespace: llm-hosting  
   labels:
     component: aiworkshop
@@ -30,7 +30,7 @@ spec:
       env:
         - name: HF_HOME
           value: /tmp/hf_home
-      image: 'quay.io/modh/vllm:rhoai-2.21-cuda'
+      image: 'quay.io/modh/vllm:rhoai-2.22-cuda'
       name: kserve-container
       ports:
         - containerPort: 8080
