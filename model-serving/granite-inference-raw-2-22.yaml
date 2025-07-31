@@ -38,7 +38,7 @@ spec:
           cpu: '4'
           memory: 16Gi
           nvidia.com/gpu: '1'
-      runtime: vllm-rhoai-2.21
+      runtime: vllm-rhoai-2.22
       storage:
         key: aws-connection-models
         path: ibm-granite/granite-3.2-8b-instruct/
