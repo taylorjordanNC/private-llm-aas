@@ -44,7 +44,7 @@ spec:
           - name: user1
             password: openshift
             service: granite-3dot2-8b-instruct
-    - repoURL: https://github.com/redhat-gpte-devopsautomation/private-summit-llm-aas
+    - repoURL: https://github.com/redhat-gpte-devopsautomation/private-llm-aas
       targetRevision: main
       ref: values
   destination:
