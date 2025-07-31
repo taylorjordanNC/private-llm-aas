@@ -14,12 +14,12 @@ threeScale:
   startingCSV: 3scale-operator.v0.12.3
 
 cmsUpload:
-  repoURL: https://github.com/redhat-gpte-devopsautomation/private-summit-llm-aas
+  repoURL: https://github.com/redhat-gpte-devopsautomation/private-llm-aas
   targetRevision: main
   path: 3scale/cms-upload
 
 llmaas:
-  repoURL: https://github.com/redhat-gpte-devopsautomation/private-summit-llm-aas
+  repoURL: https://github.com/redhat-gpte-devopsautomation/private-llm-aas
   targetRevision: main
   path: model-serving
 
