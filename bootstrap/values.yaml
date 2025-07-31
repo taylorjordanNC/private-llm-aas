@@ -24,11 +24,13 @@ llmaas:
   path: model-serving
 
 slackMcpSecret:
-  name: slack-secret
   namespace: llama-serve
+  name: slack-secret
+  path: mcp_servers
   slackBotToken: secret
   slackTeamId: secret
   graniteToken: secret
+  llamaToken: secret
 
 llama:
   repoURL: https://github.com/rhpds/private-maas-llama-stack-on-ocp.git
