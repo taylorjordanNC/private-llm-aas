@@ -3,6 +3,7 @@ kind: LlamaStackDistribution
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
   name: llamastack
 spec:
   replicas: 1
