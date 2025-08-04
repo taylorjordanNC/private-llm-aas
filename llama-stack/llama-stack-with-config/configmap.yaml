@@ -23,9 +23,9 @@ data:
       - provider_id: vllm
         provider_type: remote::vllm
         config:
-          url: ${env.GRANITE_VLLM:http://granite-3dot2-8b-instruct-predictor.llm-hosting.svc.cluster.local:8080/v1}
+          url: ${env.GRANITE_URL:http://granite-3dot2-8b-instruct-predictor.llm-hosting.svc.cluster.local:8080/v1}
           tls_verify: false
-          api_token: ${env.VLLM_API_TOKEN:fake}
+          api_token: ${env.GRANITE_TOKEN:fake}
           #max_tokens: 12000
           #tls_verify: false
       - provider_id: sentence-transformers
