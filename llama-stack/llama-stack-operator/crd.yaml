@@ -7,6 +7,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "0"
   labels:
     app.kubernetes.io/name: llama-stack-k8s-operator
+    argocd.argoproj.io/instance: llama-stack
   name: llamastackdistributions.llamastack.io
 spec:
   group: llamastack.io
