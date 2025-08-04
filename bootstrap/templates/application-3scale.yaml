@@ -50,6 +50,9 @@ spec:
           - name: user3
             password: openshift
             service: granite-3dot2-8b-instruct
+          - name: user9
+            password: openshift
+            service: granite-3dot2-8b-instruct
     - repoURL: https://github.com/redhat-gpte-devopsautomation/private-llm-aas
       targetRevision: main
       ref: values
