@@ -5,6 +5,10 @@ kind: Kustomization
 commonLabels:
   component: llama-stack
 
+commonAnnotations:
+  argocd.argoproj.io/compare-options: IgnoreExtraneous
+  argocd.argoproj.io/sync-options: Prune=false
+
 resources:
 # wave -1 - namespaces
 - namespace.yaml
