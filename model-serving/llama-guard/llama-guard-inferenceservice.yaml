@@ -34,4 +34,4 @@ spec:
       - effect: NoSchedule
         key: nvidia.com/gpu
         value: l4-gpu
-        operator: Exists
+        operator: Equal
