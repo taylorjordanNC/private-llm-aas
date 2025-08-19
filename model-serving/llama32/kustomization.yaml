@@ -5,4 +5,4 @@ resources:
   - oci-data-connection.yaml
   - servingruntime.yaml
 
-namespace: lls-demo
+namespace: llm-hosting
