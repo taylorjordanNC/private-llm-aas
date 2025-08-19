@@ -25,7 +25,8 @@ resources:
 - images-puller.yaml
 - 3scale-network-policy.yaml
 # wave 2
-- granite-inference-raw-2-22.yaml
+#- granite-inference-raw-2-22.yaml
 #- granite-inference-raw.yaml
 #- granite-8b/inferenceservice.yaml
+- llama32/
 - llama-guard/

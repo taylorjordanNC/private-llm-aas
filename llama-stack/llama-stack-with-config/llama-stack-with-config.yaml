@@ -11,9 +11,9 @@ spec:
   server:
     containerSpec:
       env:
-        - name: GRANITE_VLLM
-          value: 'http://granite-3dot2-8b-instruct-predictor.llm-hosting.svc.cluster.local:8080/v1'
-        - name: GRANITE_TOKEN
+        - name: LLAMA32_URL
+          value: 'http://llama32-3b-predictor.llm-hosting.svc.cluster.local:8080/v1'
+        - name: LLAMA32_TOKEN
           value: openshift
       name: llama-stack
       port: 8321

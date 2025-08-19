@@ -23,9 +23,9 @@ data:
       - provider_id: vllm
         provider_type: remote::vllm
         config:
-          url: ${env.GRANITE_URL:http://granite-3dot2-8b-instruct-predictor.llm-hosting.svc.cluster.local:8080/v1}
+          url: ${env.LLAMA32_URL:http://llama32-3b-predictor.llm-hosting.svc.cluster.local:8080/v1}
           tls_verify: false
-          api_token: ${env.GRANITE_TOKEN:fake}
+          api_token: ${env.LLAMA32_TOKEN:fake}
           #max_tokens: 12000
           #tls_verify: false
       - provider_id: sentence-transformers
@@ -119,9 +119,9 @@ data:
       db_path: ${env.SQLITE_STORE_DIR:~/.llama/distributions/remote-vllm}/registry.db
     models:
     - metadata: {}
-      model_id: ibm-granite/granite-3.2-8b-instruct
+      model_id: llama-3.2-3b
       provider_id: vllm
-      provider_model_id: ibm-granite/granite-3.2-8b-instruct
+      provider_model_id: llama-3.2-3b
       model_type: llm
     - metadata:
         embedding_dimension: 384
@@ -148,3 +148,7 @@ data:
       provider_id: model-context-protocol
       mcp_endpoint:
         uri: http://ocp-mcp-server:8000/sse
+    - toolgroup_id: mcp::slack
+      provider_id: model-context-protocol
+      mcp_endpoint:
+        uri: "http://slack-mcp-server:80/sse"
