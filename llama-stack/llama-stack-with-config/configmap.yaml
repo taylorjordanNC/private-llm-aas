@@ -119,9 +119,9 @@ data:
       db_path: ${env.SQLITE_STORE_DIR:~/.llama/distributions/remote-vllm}/registry.db
     models:
     - metadata: {}
-      model_id: llama-3.2-3b
+      model_id: llama32-3b
       provider_id: vllm
-      provider_model_id: llama-3.2-3b
+      provider_model_id: llama32-3b
       model_type: llm
     - metadata:
         embedding_dimension: 384
