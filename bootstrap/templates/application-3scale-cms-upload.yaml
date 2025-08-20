@@ -15,6 +15,9 @@ spec:
         hook:
           pre:
             hostPattern: maas-admin.{{ .Values.deployer.domain }}
+        git:
+          repoURL: {{ .Values.cmsUpload.repoURL }}
+          ref: {{ .Values.cmsUpload.targetRevision }}
   destination:
     server: https://kubernetes.default.svc
     namespace: 3scale
