@@ -26,9 +26,7 @@ spec:
         - '--chat-template'
         - /app/data/template/tool_chat_template_llama3.2_json.jinja
         - '--max-model-len'
-        - '32768'
-        - '--max-num-seqs'
-        - '8'
+        - '128000'
       command:
         - python
         - '-m'
@@ -36,7 +34,7 @@ spec:
       env:
         - name: HF_HOME
           value: /tmp/hf_home
-      image: 'quay.io/modh/vllm@sha256:0d55419f3d168fd80868a36ac89815dded9e063937a8409b7edf3529771383f3'
+      image: 'quay.io/modh/vllm:rhoai-2.22-cuda'
       name: kserve-container
       ports:
         - containerPort: 8080
