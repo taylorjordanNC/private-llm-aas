@@ -25,10 +25,10 @@ spec:
         - llama3_json
         - '--chat-template'
         - /app/data/template/tool_chat_template_llama3.2_json.jinja
-        # - '--max-model-len'
-        # - '32768'
-        # - '--max-num-seqs'
-        # - '8'
+        - '--max-model-len'
+        - '32768'
+        - '--max-num-seqs'
+        - '8'
       command:
         - python
         - '-m'
