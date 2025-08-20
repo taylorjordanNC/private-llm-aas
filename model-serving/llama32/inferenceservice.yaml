@@ -12,17 +12,33 @@ spec:
     maxReplicas: 1
     minReplicas: 1
     model:
+      args:
+        - '--port=8080'
+        - '--model=/mnt/models'
+        - '--served-model-name=llama32-3b'
+        - '--enable-auto-tool-choice'
+        - '--enable-chunked-prefill'
+        - '--tool-call-parser'
+        - llama3_json
+        - '--chat-template'
+        - /app/data/template/tool_chat_template_llama3.2_json.jinja
+        - '--max-model-len'
+        - '65536'
+        - '--max-num-seqs'
+        - '16'
+        - '--dtype=half'
+        - '--distributed-executor-backend=mp'
       modelFormat:
         name: vLLM
       name: ''
       resources:
         limits:
-          cpu: '2'
-          memory: 16Gi
+          cpu: '4'
+          memory: 24Gi
           nvidia.com/gpu: '1'
         requests:
           cpu: '2'
-          memory: 8Gi
+          memory: 16Gi
           nvidia.com/gpu: '1'
       runtime: llama32-3b
       storageUri: 'oci://quay.io/redhat-ai-services/modelcar-catalog:llama-3.2-3b-instruct'
