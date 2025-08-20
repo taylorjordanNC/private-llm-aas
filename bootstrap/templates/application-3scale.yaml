@@ -53,8 +53,8 @@ spec:
           - name: user9
             password: openshift
             service: granite-3dot2-8b-instruct
-    - repoURL: https://github.com/redhat-gpte-devopsautomation/private-llm-aas
-      targetRevision: main
+    - repoURL: {{ .Values.threeScale.repoURL }}
+      targetRevision: {{ .Values.threeScale.targetRevision }}
       ref: values
   destination:
     namespace: {{ .Values.threeScale.namespace }}
