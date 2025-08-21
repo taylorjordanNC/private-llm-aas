@@ -6,8 +6,8 @@ metadata:
     opendatahub.io/recommended-accelerators: '["nvidia.com/gpu"]'
     opendatahub.io/template-display-name: vLLM ServingRuntime for KServe
     opendatahub.io/template-name: vllm-runtime
-    openshift.io/display-name: granite32-8b
-  name: granite32-8b 
+    openshift.io/display-name: granite-3dot2-8b-instruct
+  name: granite-3dot2-8b-instruct
   labels:
     opendatahub.io/dashboard: 'true'
 spec:
