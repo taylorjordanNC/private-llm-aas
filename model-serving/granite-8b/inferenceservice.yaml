@@ -35,6 +35,5 @@ spec:
     containerConcurrency: 1
     tolerations:
     - key: "nvidia.com/gpu"
-      operator: "Equal"
-      value: "True"
+      operator: "Exists"
       effect: "NoSchedule"
