@@ -3,14 +3,9 @@ kind: InferenceService
 metadata:
   annotations:
     openshift.io/display-name: granite-3dot2-8b-instruct
-    serving.knative.openshift.io/enablePassthrough: 'true'
-    sidecar.istio.io/inject: 'true'
-    sidecar.istio.io/rewriteAppHTTPProbers: 'true'
-    argocd.argoproj.io/sync-wave: "2"
+    serving.kserve.io/deploymentMode: RawDeployment
   name: granite-3dot2-8b-instruct
   namespace: llm-hosting  
-  finalizers:
-    - inferenceservice.finalizers
   labels:
     opendatahub.io/dashboard: 'true'
 spec:
