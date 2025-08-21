@@ -5,6 +5,7 @@ metadata:
     openshift.io/display-name: granite-3dot2-8b-instruct
     serving.kserve.io/deploymentMode: RawDeployment
   name: granite-3dot2-8b-instruct
+  argocd.argoproj.io/sync-wave: "2"
   labels:
     opendatahub.io/dashboard: 'true'
 spec:
