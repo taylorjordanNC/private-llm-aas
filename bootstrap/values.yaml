@@ -39,7 +39,7 @@ cmsUpload:
   path: 3scale/cms-upload
 
 llmaas:
-  repoURL: https://github.com/redhat-gpte-devopsautomation/private-llm-aas
+  repoURL: https://github.com/taylorjordanNC/private-llm-aas
   targetRevision: main
   path: model-serving
 
