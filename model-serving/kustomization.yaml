@@ -9,7 +9,7 @@ resources:
 - namespace.yaml
 # wave 0
 - user1-to-admin.yaml
-- workbench-imagestream.yaml
+#- workbench-imagestream.yaml
 - odh-dashboard-config.yaml
 #- granite-8b/oci-data-connection.yaml
 #- granite-8b/servingruntime.yaml
@@ -22,7 +22,7 @@ resources:
 #- create-odh-tec-workbench.yaml
 - nvidia-gpu-monitoring-dashboard-job.yaml
 #- anythingllm-connection-type-configmap.yaml
-- images-puller.yaml
+#- images-puller.yaml
 - 3scale-network-policy.yaml
 # wave 2
 #- granite-inference-raw-2-22.yaml
