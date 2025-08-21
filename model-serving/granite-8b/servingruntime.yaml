@@ -12,6 +12,8 @@ metadata:
   namespace: llm-hosting  
   labels:
     opendatahub.io/dashboard: 'true'
+    component: aiworkshop
+    rht-gitops.com/openshift-gitops: model-serving
 spec:
   annotations:
     prometheus.io/path: /metrics
