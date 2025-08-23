@@ -2,7 +2,6 @@ apiVersion: serving.kserve.io/v1beta1
 kind: InferenceService
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
     openshift.io/display-name: llama-guard-3-1b
     serving.kserve.io/deploymentMode: RawDeployment
   name: llama-guard-3-1b

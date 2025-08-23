@@ -2,7 +2,6 @@ apiVersion: serving.kserve.io/v1alpha1
 kind: ServingRuntime
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
     opendatahub.io/accelerator-name: ''
     opendatahub.io/apiProtocol: REST
     opendatahub.io/template-display-name: vLLM ServingRuntime for KServe - vLLM RHOAI 2.21
