@@ -8,6 +8,7 @@ commonLabels:
 resources:
 - namespace.yaml
 # wave 0
+- argocd-health-check-configmap.yaml
 - user1-to-admin.yaml
 - workbench-imagestream.yaml
 - odh-dashboard-config.yaml
@@ -28,6 +29,3 @@ resources:
 #- granite-inference-raw.yaml
 #- granite-8b/inferenceservice.yaml
 - llama-guard/
-
-patchesStrategicMerge:
-- argocd-health-check-patch.yaml
