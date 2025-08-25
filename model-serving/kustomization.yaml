@@ -8,7 +8,6 @@ commonLabels:
 resources:
 - namespace.yaml
 # wave 0
-- argocd-health-check-configmap.yaml
 - user1-to-admin.yaml
 - workbench-imagestream.yaml
 - odh-dashboard-config.yaml
