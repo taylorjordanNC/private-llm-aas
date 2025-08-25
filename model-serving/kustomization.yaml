@@ -28,3 +28,8 @@ resources:
 #- granite-inference-raw.yaml
 #- granite-8b/inferenceservice.yaml
 - llama-guard/
+
+patches:
+- path: patch-inferenceservice-health-check.yaml
+  target:
+    kind: ArgoCD
