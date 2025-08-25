@@ -30,4 +30,5 @@ spec:
     tolerations:
     - key: "nvidia.com/gpu"
       operator: "Exists"
+      value: "l40-gpu"
       effect: "NoSchedule"
