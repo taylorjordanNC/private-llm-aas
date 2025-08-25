@@ -1,7 +1,11 @@
-- op: add
-  path: /spec/resourceHealthChecks/-
-  value:
-    group: serving.kserve.io
+---
+apiVersion: argoproj.io/v1beta1
+kind: ArgoCD
+metadata:
+  name: placeholder  # This will be ignored by Kustomize when patching
+spec:
+  resourceHealthChecks:
+  - group: serving.kserve.io
     kind: InferenceService
     check: |
       hs = {}
