@@ -9,7 +9,7 @@ resources:
 - namespace.yaml
 # wave 0
 - user1-to-admin.yaml
-# - workbench-imagestream.yaml
+- workbench-imagestream.yaml
 - odh-dashboard-config.yaml
 #- vllm-runtime-granite.yaml
 #- vllm-runtime-granite-2-22.yaml
