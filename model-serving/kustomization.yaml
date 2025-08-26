@@ -16,8 +16,8 @@ resources:
 #- vllm-runtime-cpu-template.yaml
 # wave 1
 - project-manager.yaml
-- secret-aws-connection-llm-hosting.yaml
-- create-odh-tec-workbench.yaml
+# - secret-aws-connection-llm-hosting.yaml
+# - create-odh-tec-workbench.yaml
 - nvidia-gpu-monitoring-dashboard-job.yaml
 #- anythingllm-connection-type-configmap.yaml
 - images-puller.yaml
