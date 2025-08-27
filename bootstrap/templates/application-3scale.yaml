@@ -41,18 +41,12 @@ spec:
                 serviceAccount:
                   name: "3scale-status-checker"
           users:
-          - name: user1
+{{- $userCount := int .Values.user.count }}
+{{- range $index := until $userCount }}
+          - name: {{ $.Values.user.prefix }}{{ add $index 1}}
             password: openshift
             service: granite-3dot2-8b-instruct
-          - name: user2
-            password: openshift
-            service: granite-3dot2-8b-instruct
-          - name: user3
-            password: openshift
-            service: granite-3dot2-8b-instruct
-          - name: user9
-            password: openshift
-            service: granite-3dot2-8b-instruct
+{{- end }}
     - repoURL: https://github.com/redhat-gpte-devopsautomation/private-llm-aas
       targetRevision: main
       ref: values
