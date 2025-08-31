@@ -140,10 +140,10 @@ data:
     shields:
     - shield_id: ${env.SAFETY_MODEL:meta-llama/Llama-Guard-3-1B}
     tool_groups:
-    # - provider_id: tavily-search
-    #   toolgroup_id: builtin::websearch
-    # - toolgroup_id: builtin::rag
-    #   provider_id: rag-runtime
+    - provider_id: tavily-search
+      toolgroup_id: builtin::websearch
+    - toolgroup_id: builtin::rag
+      provider_id: rag-runtime
     - toolgroup_id: mcp::openshift
       provider_id: model-context-protocol
       mcp_endpoint:
