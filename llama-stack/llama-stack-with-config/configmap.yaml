@@ -106,8 +106,8 @@ data:
       - provider_id: tavily-search
         provider_type: remote::tavily-search
         config: {}
-          #api_key: ${env.TAVILY_API_KEY}
-          #max_results: 3
+          api_key: ${env.TAVILY_API_KEY}
+          max_results: 3
       - provider_id: rag-runtime
         provider_type: inline::rag-runtime
         config: {}
