@@ -12,7 +12,7 @@ deployer:
 
 workspace:
   git:
-    url: https://github.com/taylorjordanNC/private-llm-aas
+    url: https://github.com/redhat-gpte-devopsautomation/private-llm-aas
     revision: main
     path: workspace
   devworkspace:
@@ -34,13 +34,13 @@ threeScale:
   startingCSV: 3scale-operator.v0.12.3
 
 cmsUpload:
-  repoURL: https://github.com/taylorjordanNC/private-llm-aas
+  repoURL: https://github.com/redhat-gpte-devopsautomation/private-llm-aas
   targetRevision: main
   path: 3scale/cms-upload
 
 llmaas:
   repoURL: https://github.com/taylorjordanNC/private-llm-aas
-  targetRevision: main
+  targetRevision: etx-ai-training
   path: model-serving
 
 slackMcpSecret:
@@ -54,6 +54,6 @@ slackMcpSecret:
 
 llamaStack:
   repoURL: https://github.com/taylorjordanNC/private-llm-aas
-  targetRevision: main
+  targetRevision: etx-ai-training
   path: llama-stack
   namespace: lls-demo
