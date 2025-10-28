@@ -1,8 +1,6 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  annotations:
-    argocd.argoproj.io/sync-wave: "2"
   name: ocp-mcp-server
   labels:
     app: ocp-mcp-server

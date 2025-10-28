@@ -1,8 +1,6 @@
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  annotations:
-    argocd.argoproj.io/sync-wave: "3"
   name: llama-stack-config
 data:
   run.yaml: |
@@ -23,21 +21,21 @@ data:
       - provider_id: vllm
         provider_type: remote::vllm
         config:
-          url: ${env.GRANITE_URL:http://granite-3dot2-8b-instruct-predictor.llm-hosting.svc.cluster.local:8080/v1}
+          url: ${env.LLAMA32_URL:http://llama32-3b-predictor.lls-demo.svc.cluster.local:8080/v1}
           tls_verify: false
-          api_token: ${env.GRANITE_TOKEN:fake}
+          api_token: ${env.LLAMA32_TOKEN:fake}
           #max_tokens: 12000
           #tls_verify: false
       - provider_id: sentence-transformers
         provider_type: inline::sentence-transformers
         config: {}
-      - provider_id: vllm-safety
-        provider_type: remote::vllm
-        config:
-          url: ${env.SAFETY_MODEL:http://llama-guard-3-1b-predictor.llm-hosting.svc.cluster.local:8080/v1}
-          max_tokens: ${env.VLLM_MAX_TOKENS:4096}
-          api_token: ${env.VLLM_API_TOKEN:fake}
-          tls_verify: ${env.VLLM_TLS_VERIFY:false}
+      # - provider_id: vllm-safety
+      #   provider_type: remote::vllm
+      #   config:
+      #     url: ${env.SAFETY_MODEL:http://llama-guard-3-1b-predictor.vllm.svc.cluster.local:8080/v1}
+      #     max_tokens: ${env.VLLM_MAX_TOKENS:4096}
+      #     api_token: ${env.VLLM_API_TOKEN:fake}
+      #     tls_verify: ${env.VLLM_TLS_VERIFY:false}
       agents:
       - provider_id: meta-reference
         provider_type: inline::meta-reference
@@ -119,26 +117,26 @@ data:
       db_path: ${env.SQLITE_STORE_DIR:~/.llama/distributions/remote-vllm}/registry.db
     models:
     - metadata: {}
-      model_id: granite-3dot2-8b-instruct
+      model_id: llama32-3b
       provider_id: vllm
-      provider_model_id: granite-3dot2-8b-instruct
+      provider_model_id: llama32-3b
       model_type: llm
     - metadata:
         embedding_dimension: 384
       model_id: all-MiniLM-L6-v2
       provider_id: sentence-transformers
       model_type: embedding
-    - metadata: {}
-      model_id: ${env.SAFETY_MODEL:meta-llama/Llama-Guard-3-1B}
-      #provider_model_id: ${env.SAFETY_MODEL:llama-guard-3-1b}
-      provider_id: vllm-safety
-      model_type: llm
+    # - metadata: {}
+    #   model_id: ${env.SAFETY_MODEL:meta-llama/Llama-Guard-3-1B}
+    #   #provider_model_id: ${env.SAFETY_MODEL:llama-guard-3-1b}
+    #   provider_id: vllm-safety
+    #   model_type: llm
     datasets: []
     vector_dbs: []
     scoring_fns: []
     benchmarks: []
-    shields:
-    - shield_id: ${env.SAFETY_MODEL:meta-llama/Llama-Guard-3-1B}
+    shields: []
+    # - shield_id: ${env.SAFETY_MODEL:meta-llama/Llama-Guard-3-1B}
     tool_groups:
     - provider_id: tavily-search
       toolgroup_id: builtin::websearch
@@ -148,7 +146,7 @@ data:
       provider_id: model-context-protocol
       mcp_endpoint:
         uri: http://ocp-mcp-server:8000/sse
-    # - toolgroup_id: mcp::slack
-    #   provider_id: model-context-protocol
-    #   mcp_endpoint:
-    #     uri: http://slack-mcp-server:80/sse
+    - toolgroup_id: mcp::slack
+      provider_id: model-context-protocol
+      mcp_endpoint:
+        uri: http://slack-mcp-server:80/sse

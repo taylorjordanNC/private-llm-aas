@@ -10,50 +10,13 @@ deployer:
   domain: apps.cluster-guid.sandbox.opentlc.com
   apiUrl: https://api.cluster-guid.sandbox.opentlc.com:6443
 
-workspace:
-  git:
-    url: https://github.com/redhat-gpte-devopsautomation/private-llm-aas
-    revision: main
-    path: workspace
-  devworkspace:
-    projects:
-      repoUrl: https://github.com/taylorjordanNC/coding-exercises
-      revision: main
-    components:
-      - name: tooling
-        container:
-          image: registry.redhat.io/devspaces/udi-rhel9:latest
-          sourceMapping: /projects
-
-threeScale:
-  namespace: 3scale
-  repoURL: https://github.com/rhpds/ocp-cluster-addons
-  targetRevision: main
-  path: 3scale
-  channel: threescale-2.15
-  startingCSV: 3scale-operator.v0.12.3
-
-cmsUpload:
-  repoURL: https://github.com/redhat-gpte-devopsautomation/private-llm-aas
-  targetRevision: main
-  path: 3scale/cms-upload
-
 llmaas:
   repoURL: https://github.com/taylorjordanNC/private-llm-aas
-  targetRevision: etx-ai-training
+  targetRevision: govai-summit
   path: model-serving
-
-slackMcpSecret:
-  namespace: lls-demo
-  name: slack-secret
-  path: mcp_servers
-  slackBotToken: secret
-  slackTeamId: secret
-  graniteToken: secret
-  llamaToken: secret
 
 llamaStack:
   repoURL: https://github.com/taylorjordanNC/private-llm-aas
-  targetRevision: etx-ai-training
+  targetRevision: govai-summit
   path: llama-stack
   namespace: lls-demo
